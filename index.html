@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Verse Design Activity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #verse-container {
+            padding: 20px;
+            width: fit-content;
+            transition: all 0.3s ease; 
+        }
+
+        .verse-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .verse-text {
+            font-size: 1.2rem;
+        }
+
+        .biblical-style {
+            border: 2px solid black;
+            background: linear-gradient(to right, #4a90e2, #f0f4f8, #ffffff);
+            font-family: 'Papyrus', 'Palatino', serif;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .biblical-style .verse-title {
+            font-style: italic;
+            font-size: 2.5rem;
+        }
+
+        .biblical-style .verse-text {
+            font-size: 2rem;
+        }
+
+        button {
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="addDesign()">Add Design</button>
+    <button onclick="removeDesign()">Remove Design</button>
+
+    <div id="verse-container">
+        <div class="verse-title">Deuteronomy 31:6</div>
+        <div class="verse-text">
+            "Be strong and courageous. Do not fear or be in dread of them, 
+            for it is the Lord your God who goes with you. He will not leave you or forsake you."
+        </div>
+    </div>
+
+    <script>
+        /**
+         * DOCUMENTATION:
+         * 1. addDesign: Uses classList.add to apply the 'biblical-style' CSS class to the container.
+         * 2. removeDesign: Uses classList.remove to strip the styling back to basic HTML/CSS.
+         * 3. Selectors: Uses document.getElementById to target the specific verse section.
+         */
+
+        const container = document.getElementById('verse-container');
+
+        function addDesign() {
+            container.classList.add('biblical-style');
+        }
+
+        function removeDesign() {
+            container.classList.remove('biblical-style');
+        }
+    </script>
+</body>
+</html>
